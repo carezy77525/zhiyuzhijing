@@ -26,8 +26,63 @@
         <div class="visual"><img src="./assets/hero.svg" alt="紙花與神明祝壽蛋糕插畫" /></div>
       </section>
       <section id="about" class="wrap section"><div class="heading"><p class="eyebrow">About</p><h2>品牌介紹</h2></div><div class="about-grid"><div class="panel"><p>紙語紙境相信，紙作承載的不只是形式，更是祝福、感謝、思念與敬意。我們以細緻紙藝結合傳統禮俗，為廟宇敬獻、神明祝壽、追思祭拜等場合，準備合宜且有溫度的作品。</p></div><ul class="values"><li><strong>尊重禮俗</strong><span>依用途與場合調整配色、份量與呈現方式。</span></li><li><strong>客製溝通</strong><span>協助確認尺寸、文字、日期與交付細節。</span></li><li><strong>溫暖質感</strong><span>讓每一份作品都能穩妥地傳達心意。</span></li></ul></div></section>
-      <section id="products" class="wrap section"><div class="heading"><p class="eyebrow">Products</p><h2>商品展示</h2></div><div class="products"><article class="card"><div class="art"><img src="./assets/god-flower-real.jpg" alt="好神花實拍作品" /></div><div class="body"><span class="tag">祝禱敬獻</span><h3>好神花</h3><p>適合廟宇敬神、祈福、祝禱與重要祭祀場合，以飽滿花型與穩重色彩表達虔誠敬意。</p><div class="product-action"><span>客製報價</span><button class="small-btn" type="button" data-add-cart data-name="好神花">加入購物車</button></div></div></article><article class="card"><div class="art"><img src="./assets/memorial-flower.svg" alt="永思花示意圖" /></div><div class="body"><span class="tag">追思懷念</span><h3>永思花</h3><p>為告別、追思、祭拜與紀念準備的花禮，溫柔不張揚，讓思念被安放得更妥貼。</p><div class="product-action"><span>客製報價</span><button class="small-btn" type="button" data-add-cart data-name="永思花">加入購物車</button></div></div></article><article class="card"><div class="art"><img src="./assets/blessing-cake.svg" alt="神明祝壽蛋糕示意圖" /></div><div class="body"><span class="tag">聖誕祝壽</span><h3>神明祝壽蛋糕</h3><p>適合神明聖誕、祝壽與宮廟慶典，可依神明、尺寸與祝賀語規劃整體呈現。</p><div class="product-action"><span>客製報價</span><button class="small-btn" type="button" data-add-cart data-name="神明祝壽蛋糕">加入購物車</button></div></div></article></div></section>
-      <section id="contact" class="wrap section"><div class="contact"><div><p class="eyebrow">Contact</p><h2>聯絡方式</h2><p>可先提供商品項目、用途、日期、地點與預算，我們會協助挑選合適款式。</p><div class="contact-list"><span>電話：0912-345-678</span><span>LINE：@paperblessing</span><span>Email：hello@example.com</span></div></div><button class="btn primary" type="button" data-cart-open>查看購物車</button></div></section>
+            <section id="products" class="wrap section">
+        <div class="heading">
+          <p class="eyebrow">Products</p>
+          <h2>商品展示</h2>
+          <p class="section-note">點選系列即可查看該系列作品照片與下單品項。</p>
+        </div>
+        <div class="product-tabs" role="tablist" aria-label="商品系列">
+          <button class="tab-button is-active" type="button" role="tab" aria-selected="true" data-product-tab="god">好神花系列</button>
+          <button class="tab-button" type="button" role="tab" aria-selected="false" data-product-tab="memorial">永思花系列</button>
+          <button class="tab-button" type="button" role="tab" aria-selected="false" data-product-tab="cake">神明祝壽蛋糕</button>
+        </div>
+        <div class="series-panels">
+          <section class="series-panel is-active" data-product-panel="god" role="tabpanel">
+            <div class="series-layout">
+              <div class="series-copy">
+                <span class="tag">祝禱敬獻</span>
+                <h3>好神花系列</h3>
+                <p>適合廟宇敬神、祈福、祝禱與重要祭祀場合。可依用途、尺寸、色系與預算討論客製。</p>
+                <div class="product-action"><span>客製報價</span><button class="small-btn" type="button" data-add-cart data-name="好神花">加入購物車</button></div>
+              </div>
+              <div class="photo-grid">
+                <figure class="photo-card large-photo"><img src="./assets/god-flower-real.jpg" alt="好神花實拍作品" /><figcaption>好神花實拍作品</figcaption></figure>
+              </div>
+            </div>
+          </section>
+          <section class="series-panel" data-product-panel="memorial" role="tabpanel" hidden>
+            <div class="series-layout">
+              <div class="series-copy">
+                <span class="tag">追思懷念</span>
+                <h3>永思花系列</h3>
+                <p>適合告別、追思、祭拜與紀念場合，溫柔不張揚，讓思念被安放得更妥貼。</p>
+                <div class="product-action"><span>客製報價</span><button class="small-btn" type="button" data-add-cart data-name="永思花">加入購物車</button></div>
+              </div>
+              <div class="photo-grid">
+                <figure class="photo-card"><img src="./assets/memorial-flower.svg" alt="永思花作品示意" /><figcaption>永思花作品示意</figcaption></figure>
+                <div class="empty-photo">永思花實拍照片可再新增</div>
+              </div>
+            </div>
+          </section>
+          <section class="series-panel" data-product-panel="cake" role="tabpanel" hidden>
+            <div class="series-layout">
+              <div class="series-copy">
+                <span class="tag">聖誕祝壽</span>
+                <h3>神明祝壽蛋糕</h3>
+                <p>適合神明聖誕、祝壽與宮廟慶典，可依神明、尺寸與祝賀語規劃整體呈現。</p>
+                <div class="product-action"><span>客製報價</span><button class="small-btn" type="button" data-add-cart data-name="神明祝壽蛋糕">加入購物車</button></div>
+              </div>
+              <div class="photo-grid">
+                <figure class="photo-card"><img src="./assets/blessing-cake.svg" alt="神明祝壽蛋糕作品示意" /><figcaption>神明祝壽蛋糕作品示意</figcaption></figure>
+                <div class="empty-photo">祝壽蛋糕實拍照片可再新增</div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+
+<section id="contact" class="wrap section"><div class="contact"><div><p class="eyebrow">Contact</p><h2>聯絡方式</h2><p>可先提供商品項目、用途、日期、地點與預算，我們會協助挑選合適款式。</p><div class="contact-list"><span>電話：0912-345-678</span><span>LINE：@paperblessing</span><span>Email：hello@example.com</span></div></div><button class="btn primary" type="button" data-cart-open>查看購物車</button></div></section>
     </main>
     <aside class="cart-drawer" data-cart-drawer aria-hidden="true" aria-label="購物車"><div class="cart-panel"><div class="cart-head"><div><p class="eyebrow">Cart</p><h2>購物車</h2></div><button class="icon-btn" type="button" data-cart-close aria-label="關閉購物車">×</button></div><div class="cart-items" data-cart-items></div><form class="order-form" data-order-form><label>姓名<input name="name" type="text" placeholder="請輸入姓名" required /></label><label>電話<input name="phone" type="tel" placeholder="請輸入聯絡電話" required /></label><label>需求日期<input name="date" type="date" /></label><label>備註<textarea name="note" rows="4" placeholder="用途、地點、預算、想要的色系或尺寸"></textarea></label><button class="btn primary" type="submit">產生訂單內容</button></form><div class="order-output" data-order-output hidden><strong>訂單內容</strong><textarea data-order-text rows="8" readonly></textarea><button class="btn secondary" type="button" data-copy-order>複製訂單內容</button></div></div></aside>
     <footer class="site-footer">

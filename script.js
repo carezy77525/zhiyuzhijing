@@ -23,3 +23,22 @@ orderForm?.addEventListener("submit", function(event){ event.preventDefault(); i
 "); orderOutput.hidden=false; });
 document.querySelector("[data-copy-order]")?.addEventListener("click", async function(){ if(!orderText?.value)return; await navigator.clipboard.writeText(orderText.value); showToast("訂單內容已複製"); });
 renderCart();
+
+// 商品系列分頁切換
+const productTabs = document.querySelectorAll('[data-product-tab]');
+const productPanels = document.querySelectorAll('[data-product-panel]');
+productTabs.forEach(function(tab){
+  tab.addEventListener('click', function(){
+    const target = tab.dataset.productTab;
+    productTabs.forEach(function(item){
+      const active = item === tab;
+      item.classList.toggle('is-active', active);
+      item.setAttribute('aria-selected', active ? 'true' : 'false');
+    });
+    productPanels.forEach(function(panel){
+      const active = panel.dataset.productPanel === target;
+      panel.classList.toggle('is-active', active);
+      panel.hidden = !active;
+    });
+  });
+});
