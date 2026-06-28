@@ -53,3 +53,13 @@ updateBackTop();
 document.addEventListener("contextmenu", function(event){ event.preventDefault(); });
 document.addEventListener("dragstart", function(event){ if(event.target instanceof HTMLImageElement){ event.preventDefault(); } });
 document.addEventListener("selectstart", function(event){ const target = event.target; if(target instanceof HTMLInputElement || target instanceof HTMLTextAreaElement){ return; } event.preventDefault(); });
+
+// 強化右鍵與圖片儲存保護
+window.oncontextmenu = function(event){ event.preventDefault(); event.stopPropagation(); return false; };
+document.oncontextmenu = function(event){ event.preventDefault(); event.stopPropagation(); return false; };
+document.addEventListener("contextmenu", function(event){ event.preventDefault(); event.stopPropagation(); return false; }, true);
+document.addEventListener("mousedown", function(event){ if(event.button === 2){ event.preventDefault(); event.stopPropagation(); return false; } }, true);
+document.querySelectorAll("img").forEach(function(img){
+  img.setAttribute("draggable", "false");
+  img.setAttribute("oncontextmenu", "return false");
+});
