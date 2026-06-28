@@ -48,3 +48,8 @@ function updateBackTop(){ if(!backTopButton)return; backTopButton.classList.togg
 window.addEventListener("scroll", updateBackTop, { passive: true });
 backTopButton?.addEventListener("click", function(){ window.scrollTo({ top: 0, behavior: "smooth" }); });
 updateBackTop();
+
+// 基本內容保護：降低反白、右鍵另存、拖曳圖片的機率。
+document.addEventListener("contextmenu", function(event){ event.preventDefault(); });
+document.addEventListener("dragstart", function(event){ if(event.target instanceof HTMLImageElement){ event.preventDefault(); } });
+document.addEventListener("selectstart", function(event){ const target = event.target; if(target instanceof HTMLInputElement || target instanceof HTMLTextAreaElement){ return; } event.preventDefault(); });
