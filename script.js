@@ -42,3 +42,9 @@ productTabs.forEach(function(tab){
     });
   });
 });
+
+const backTopButton = document.querySelector("[data-back-top]");
+function updateBackTop(){ if(!backTopButton)return; backTopButton.classList.toggle("is-visible", window.scrollY > 360); }
+window.addEventListener("scroll", updateBackTop, { passive: true });
+backTopButton?.addEventListener("click", function(){ window.scrollTo({ top: 0, behavior: "smooth" }); });
+updateBackTop();
