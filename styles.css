@@ -30,3 +30,11 @@ html,body{background:#fff8e8;color:#6f0f0f;font-synthesis:none;text-rendering:op
 
 /* hero 50-50 layout and centered category cards */
 .hero{grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important}.hero > div{min-width:0}.hero-series-cards a{justify-content:center;text-align:center}.hero-series-cards a span{display:inline-flex;text-align:center}.hero .visual{width:100%}.hero .visual img{width:100%;display:block}
+
+/* strict hero 50-50 layout */
+@media (min-width: 881px){
+  .hero.wrap{width:min(1480px,calc(100% - 80px));grid-template-columns:calc(50% - 24px) calc(50% - 24px)!important;gap:48px!important;align-items:center}
+  .hero.wrap > div:first-child,.hero.wrap > .visual{width:100%;max-width:none;min-width:0}
+  .hero .visual{justify-self:stretch;align-self:center}
+  .hero .visual img{width:100%;height:auto;display:block}
+}
