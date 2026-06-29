@@ -45,3 +45,5 @@ html,body{background:#fff8e8;color:#6f0f0f;font-synthesis:none;text-rendering:op
   .hero .visual{width:100%;aspect-ratio:4/3;overflow:hidden;border-radius:20px;background:#fff8e8}
   .hero .visual img{width:100%;height:100%!important;object-fit:cover;object-position:center;border-radius:20px}
 }
+
+.contact-cards-section{grid-template-columns:1fr 1fr}.contact-card-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.contact-card-button{display:grid;gap:8px;align-content:center;min-height:116px;padding:22px;border:1px solid rgba(255,248,232,.22);border-radius:16px;background:rgba(255,248,232,.08);color:#fff7ec;box-shadow:0 14px 30px rgba(0,0,0,.12);transition:transform .18s ease,background .18s ease}.contact-card-button:hover{transform:translateY(-2px);background:rgba(255,248,232,.14)}.contact-card-button span{font-size:17px;color:#ead8c3}.contact-card-button strong{font-size:24px;font-weight:400!important}@media(max-width:880px){.contact-cards-section{grid-template-columns:1fr}.contact-card-grid{grid-template-columns:1fr}}
