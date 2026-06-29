@@ -21,3 +21,7 @@ html,body,button,input,textarea,select,a,h1,h2,h3,p,span,li,strong,small,figcapt
 
 /* refined paper palette and lighter handwriting weight */
 html,body{background:#fff8e8;color:#6f0f0f;font-synthesis:none;text-rendering:optimizeLegibility}h1,h2,h3,.brand,.links,.eyebrow,.tag,.btn,.small-btn,.cart-button,strong{font-weight:400!important}.btn,.small-btn,.cart-button{letter-spacing:0}.hero p,.section-note,.hero-keywords,.panel p,.card p,.contact p{color:#8a4b3f}.site-header{background:rgba(255,248,232,.94)}
+
+/* hero visual fine tuning */
+.hero h1{font-size:clamp(36px,5.8vw,67px);line-height:1.12}.hero .visual{border-radius:20px;box-shadow:0 18px 44px rgba(111,15,15,.16),0 4px 14px rgba(111,15,15,.08)}.hero .visual img{border-radius:20px}
+@media(max-width:520px){.hero h1{font-size:35px}}
